@@ -1,0 +1,24 @@
+<div class="mt-4 mb-4 text-left">
+
+  <form method="POST">
+    <div class="form-row ml-3">
+      <label for="inputCatName">Tên danh mục</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter category name">
+    </div>
+    <div class="form-row ml-3">
+      {{!-- list danh mục -> kết bảng --}}
+      <label for="inputCatParentName">Danh mục cha</label>
+      <select type="text" class="form-control" id="CatIdParent" name="id_parent">
+          {{#each cat_parent}}
+              <option value="{{id}}">
+                {{name}}
+              </option>
+          {{/each}}
+      </select>
+    </div>
+    <div class="mt-3 ml-3">
+    <button class="btn btn-primary" type="submit">Ghi</button>
+    <a class="btn btn-dark" href="/admin/categories">Bỏ qua</a>
+    </div>
+  </form>
+</div>
