@@ -58,6 +58,4 @@ require('./middlewares/routes.mdw')(app);
 app.use(express.static(__dirname+'/public'));
 
 const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
-})
+app.listen(process.env.PORT || 5000)
